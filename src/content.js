@@ -2,8 +2,7 @@ import 'libs/polyfills';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider, StyleSheetManager } from 'styled-components';
-import Box from 'components/Box';
-import Example from 'components/Example';
+import { Wrapper } from 'components/Wrapper';
 import defaultTheme from 'themes/default';
 
 const root = document.createElement('div');
@@ -21,13 +20,7 @@ const App = () => {
   return (
     <StyleSheetManager target={styleContainer}>
       <ThemeProvider theme={defaultTheme}>
-        <Box
-          position="fixed"
-          bottom={3}
-          right={3}
-        >
-          <Example />
-        </Box>
+        <Wrapper />
       </ThemeProvider>
     </StyleSheetManager>
   );
